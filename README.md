@@ -1,44 +1,36 @@
-# Blockcerts in Hyperledger
+# Certificados emitidos por CASA UR
 
-This is an interactive registry for educational achivements that follow the [Blockcerts](https://www.blockcerts.org/guide/standard.html) certification schema and a similar process for granting certificates.
+Caso de uso de emision de certificados utilizando hyperledger blockchain y siguiendo el estandar [Blockcerts](https://www.blockcerts.org/guide/standard.html)
 
-This business network defines:
+El diseño de la red (Business Network) contien los siguientes elementos:
 
-**Participant**
-`Administrator`
+**Participant** </p> 
+`Administrator`: emisor de los certificados, funcionario CASA UR. </p>
+`ExternalUser`: usuario externos que consulta el certificado.
 
-**Asset**
-`Certificate Template`
-`Personal Certificate`
+**Asset** </p> 
+`Certificate Template`: formato generico de certificado (participacion en programa, idiomas, sanciones, etc..) </p>
+`Personal Certificate`: emision de un certificado a un estudiante.
 
 **Transaction**
-`AddRoster`
+`AddRoster`: emision de certificados a una lista de estudiantes.
 
-Initially a `Certificate Template` is created by an `Administrator` and then granted to one student instantiating the `Personal Certificate`  or a list of student using the `AddRoster` transaction. 
+Inicialmente el formato9 generico de certificado `Certificate Template` es creado por un funcionario de CASA UR `Administrator`, luego el certificado es emitido a un estudiante mediante la presonalizacion del certificado `Personal Certificate`  o se emite a un conmjunto de estudiantes utilizando la transaccion `AddRoster`. 
 
-To test this Business Network Definition in the **Test** tab:
+Para utilizar la red, vamos a seguir el siguiente ejemplo en el **Test** tab:
 
-Create an global `Administrator` at the central registry office:
+Crear un administrador `Administrator`:
 
 ```
 {
   "$class": "org.degree.Administrator",
-  "email": "registry@uoflife.com",
-  "firstName": "Global",
+  "email": "casaur@urosario.edu.co",
+  "firstName": "Juan",
   "lastName": "Admin",
-  "publicKey": "REGISTRYadminKEYtest04072018"
+  "publicKey": "CASAURadminKEYtest10092018"
 }
 ```
-Create an local `Administrator` at the school:
-```
-{
-  "$class": "org.degree.Administrator",
-  "email": "school@uoflife.com",
-  "firstName": "Local",
-  "lastName": "Admin",
-  "publicKey": "SCHOOLadminKEYtest04072018"
-}
-```
+AQUI VOY
 Create a `Certificate Template` asset:
 
 ```

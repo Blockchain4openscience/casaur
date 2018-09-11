@@ -71,13 +71,7 @@ event AdministratorHistoryResults {
   o String[] results
 }
 
-/*
-event SampleEvent {
-  --> SampleAsset asset
-  o String oldValue
-  o String newValue
-}
-*/
+
 concept RecipientInfo {
   o String certId
   o Recipient recipient
@@ -93,7 +87,7 @@ concept RecipientProfile {
   o String typen default = 'RecipientProfile,Extension'
   o String name
   o String publicKey
-  o Assertions assertions /*Assertions design to include types of certificates*/
+  o Assertions assertions 
 }
 
 concept Assertions{
