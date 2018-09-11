@@ -15,9 +15,11 @@ El diseño de la red (Business Network) contien los siguientes elementos:
 **Transaction**
 `AddRoster`: emision de certificados a una lista de estudiantes.
 
-Inicialmente el formato9 generico de certificado `Certificate Template` es creado por un funcionario de CASA UR `Administrator`, luego el certificado es emitido a un estudiante mediante la presonalizacion del certificado `Personal Certificate`  o se emite a un conmjunto de estudiantes utilizando la transaccion `AddRoster`. 
+Inicialmente el formato generico de certificado `Certificate Template` es creado por un funcionario de CASA UR `Administrator`, luego el certificado es emitido a un estudiante mediante la presonalizacion del certificado `Personal Certificate`  o se emite a un conmjunto de estudiantes utilizando la transaccion `AddRoster`. 
 
 Para utilizar la red, vamos a seguir el siguiente ejemplo en el **Test** tab:
+
+## Creacion de participante administrador (funcionario CASA UR)
 
 Crear un administrador `Administrator`:
 
@@ -30,9 +32,10 @@ Crear un administrador `Administrator`:
   "publicKey": "CASAURadminKEYtest10092018"
 }
 ```
-AQUI VOY
-Create a `Certificate Template` asset:
+## Creacion de formatos de certificacion, ejemplos: participacion en programa, requisito de idioma, sancion disciplinaria.
 
+Creacion de formato de certificado `Certificate Template` (tipo participacion en programa: 0001):
+OJO Modificar JSON
 ```
 {
   "$class": "org.degree.CertificateTemplate",
@@ -74,9 +77,18 @@ Create a `Certificate Template` asset:
   "revoked": false
 }
 ```
+Creacion de formato de certificado `Certificate Template` (requisitos de idioma: 0002):
+OJO Agregar JSON
+```
+```
+Creacion de formato de certificado `Certificate Template` (sancion disciplinaria: 0003):
+OJO Agregar JSON
+```
+```
+## Emision de certificados a uno o varios estudiantes
 
-Instantiate an individual `Personal Certificate` for juan.uno@gmail.com:
-
+Emision de certificado a un estudiante `Personal Certificate` identificado por su correo electronico for juan.uno@urosario.edu.co:
+OJO Modificar JSON
 ```
 {
   "$class": "org.degree.PersonalCertificate",
@@ -96,10 +108,9 @@ Instantiate an individual `Personal Certificate` for juan.uno@gmail.com:
   },
 }
 ```
-This transaction has registered generic degree base on a template `templateId:0001` to juan.uno@gmail.com.
+Esta transaccion ha emitido un certificado de particiapacion en programa `templateId:0001` a juan.uno@urosario.edu.co.
 
-
-Submit a `AddRoster` transaction to personalize many certificates at the same time:
+Emision masiva de certificados mediante la transaccion `AddRoster` permite la personalizacion de varios certificados al mismo tiempo:
 
 ```
 {
@@ -139,6 +150,4 @@ Submit a `AddRoster` transaction to personalize many certificates at the same ti
   ]
 }
 ```
-This transaction has registered generic degrees base on a template `templateId:0001` to a group of students whose information is introduced as a collection of strings with the fields: id(email), name and publicKey for each student. Note that the transactions in the bna are only defined for writting onto the blockchain. Reading form the blockchain will be coded in the [frontend](https://github.com/ccastroiragorri/blockdegree-frontend) application.
-
-
+Mediante la anterior transaccion se han emitido un conjunto de certificados de participacion de programa `templateId:0001` a un conjunto de estudiante cuya informacion contiene los siguientes campos: id(email), nombre, publicKey, programa academico y fechas de vinculacion al programa. 
