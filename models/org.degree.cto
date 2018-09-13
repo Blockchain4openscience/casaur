@@ -36,13 +36,13 @@ participant ExternalUser identified by email {
 
 asset CertificateTemplate identified by templateId extends Certificate {
   o String templateId
-  --> Administrator globalAdministrator
+  --> Administrator administrator
 }
 
 asset PersonalCertificate identified by certId {
   o String certId
   --> CertificateTemplate templateId
-  --> Administrator localAdministrator
+  --> Administrator administrator
   o Recipient recipient 
   o RecipientProfile recipientProfile
   o String hash
@@ -51,7 +51,7 @@ asset PersonalCertificate identified by certId {
 /*add person info as a string*/
 transaction AddRoster {
   --> CertificateTemplate templateId
-  --> Administrator localAdministrator
+  --> Administrator administrator
   o RecipientInfo[] recipientsInfo
 }
 
@@ -87,6 +87,7 @@ concept RecipientProfile {
   o String typen default = 'RecipientProfile,Extension'
   o String name
   o String publicKey
+  o Integer legalid
   o Assertions assertions 
 }
 
@@ -94,14 +95,35 @@ concept Assertions{
   o String program
   o DateTime firtsdate optional
   o DateTime lastdate optional
-  o String[] language optional
+  o Language language optional
   o Discipline discipline optional
 }
 
+concept Language {
+  o String typen default = 'Language,Extension'
+  o Boolean opcion 
+  o Idiomas idiomareq optional
+  o Ingles inglesreq optional
+}
+
 concept Discipline {
-  o String typen 
+  o String typen default = 'Discipline,Extension'
+  o String sanction
   o Integer periods 
   o String fault 
   o DateTime firtsdate 
+  o DateTime faultdate
   o String processid 
 }
+  
+enum Idiomas {
+o aleman
+o italiano
+o frances
+o portugues  
+}  
+
+  enum Ingles {
+o B1
+o B2
+}  

@@ -34,7 +34,6 @@ concept Issuer {
   o String image optional
   o SignatureLines signatureLines
   o String menid 
-  o String commercialid 
 }
 
 concept SignatureLines {
