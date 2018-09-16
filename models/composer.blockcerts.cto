@@ -28,12 +28,12 @@ concept Issuer {
   o String id
   o String typen default='Profile'
   o String name
+  o String menid
   o String urln optional
   o String email optional
   o String description optional
   o String image optional
   o SignatureLines signatureLines
-  o String menid 
 }
 
 concept SignatureLines {

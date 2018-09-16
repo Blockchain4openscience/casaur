@@ -27,13 +27,6 @@ participant Administrator identified by email {
   o String publicKey
 }
 
-participant ExternalUser identified by email {
-  o String email
-  o String firstName
-  o String lastName
-  o String publicKey
-}
-
 asset CertificateTemplate identified by templateId extends Certificate {
   o String templateId
   --> Administrator administrator
@@ -87,23 +80,23 @@ concept RecipientProfile {
   o String typen default = 'RecipientProfile,Extension'
   o String name
   o String publicKey
-  o Integer legalid
+  o String legalId
   o Assertions assertions 
 }
 
-concept Assertions{
+concept Assertions {
   o String program
-  o DateTime firtsdate optional
-  o DateTime lastdate optional
+  o DateTime firtsDate optional
+  o DateTime lastDate optional
   o Language language optional
   o Discipline discipline optional
 }
 
 concept Language {
   o String typen default = 'Language,Extension'
-  o Boolean opcion 
-  o Idiomas idiomareq optional
-  o Ingles inglesreq optional
+  o Boolean option 
+  o Languages languageReq optional
+  o English englishReq optional
 }
 
 concept Discipline {
@@ -111,19 +104,19 @@ concept Discipline {
   o String sanction
   o Integer periods 
   o String fault 
-  o DateTime firtsdate 
-  o DateTime faultdate
-  o String processid 
+  o DateTime firtsDate 
+  o DateTime faultDate
+  o String processId
 }
   
-enum Idiomas {
-o aleman
-o italiano
-o frances
-o portugues  
+enum Languages {
+  o aleman
+  o italiano
+  o frances
+  o portugues  
 }  
 
-  enum Ingles {
-o B1
-o B2
+enum English {
+  o B1
+  o B2
 }  
