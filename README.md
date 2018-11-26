@@ -37,77 +37,116 @@ Crear un administrador `Administrator`:
 Creacion de formato de certificado `Certificate Template` (participacion en programa: 0001):
 
 ```
-{ "$class": "org.degree.CertificateTemplate", 
-"templateId": "0001", 
-"administrator": "resource:org.degree.Administrator#casaur@urosario.edu.co",
-"typeC": "Assertion", 
-"badge": { "$class": "composer.blockcerts.Badge", 
-"id": "Conducta sin Antecedentes_Inactivo", 
-"typen": "BadgeClass", 
-"name": "Certifica", 
-"description": "Que $name$, identificado(a) con documento de identidad No. $legalid$, estuvo vinculado(a) como estudiante del programa de $program$ durante el periodo comprendido entre $firtsdate$ y $lastdate$ y no registra antecedentes disciplinarios en su historia.",
-"criteria": "Se expide a solicitud del titular de la informacion y previa autorizacion del mismo, en Bogotá D.C. en la fecha $timestamp$.",
-"issuer": { "$class": "composer.blockcerts.Issuer", 
-"id": "NIT. 860.007.759-3", 
-"typen": "Profile", 
-"name": "Universidad del Rosario", 
-"signatureLines": { "$class": "composer.blockcerts.SignatureLines", 
-"typen": "SignatureLine,Extension", 
-"name": "Yesid Garzon", 
-"image": "signYG.png", 
-"jobtitle": "Coordinador(a) de CASA UR" }, 
-"menid": "Personería Jurídica Res. 58 de septiembre 16 de 1895"} 
-}, "context": "https://w3id.org/openbadges/v2,https://w3id.org/blockcerts/v2", "revoked": false }
+{
+  "$class": "org.degree.CertificateTemplate",
+  "templateId": "0001", 
+  "administrator": "resource:org.degree.Administrator#block4opsc@gmail.com",
+  "typeC": "Assertion",
+  "badge": {
+    "$class": "composer.blockcerts.Badge",
+    "id": "Conducta sin Antecedentes_Inactivo", 
+    "typen": "BadgeClass",
+    "name": "Certifica", 
+    "description": "Que $name$, identificado(a) con documento de identidad No. $legalid$, estuvo vinculado(a) como estudiante del programa de $program$ durante el periodo comprendido entre $firtsdate$ y $lastdate$ y no registra antecedentes disciplinarios en su historia.",
+    "criteria": "Se expide a solicitud del titular de la informacion y previa autorizacion del mismo, en Bogotá D.C. en la fecha $timestamp$.",
+    "issuer": {
+      "$class": "composer.blockcerts.Issuer",
+      "id": "NIT. 860.007.759-3", 
+      "typen": "Profile",
+      "name": "Universidad del Rosario", 
+      "urln": "www.urosario.edu.co",
+      "email": "admin@urosario.edu.co",
+      "description": "",
+      "image": "https://github.com/Blockchain4openscience/diplomasExamples/blob/master/images/logoUR2.png",
+      "signatureLines": {
+        "$class": "composer.blockcerts.SignatureLines",
+        "typen": "SignatureLine,Extension",
+        "name": "John Smith", 
+        "image": "https://github.com/Blockchain4openscience/diplomasExamples/blob/master/images/signature.png",
+        "jobtitle": "Coordinador(a) de CASA UR"
+      },
+      "menid": "Personería Jurídica Res. 58 de septiembre 16 de 1895"
+    }
+  },
+  "context": "https://w3id.org/openbadges/v2,https://w3id.org/blockcerts/v2",
+  "revoked": false
+}
 ```
 Creacion de formato de certificado `Certificate Template` (requisitos de idioma: 0002):
 
 ```
-{ "$class": "org.degree.CertificateTemplate", 
-"templateId": "0002", 
-"administrator": "resource:org.degree.Administrator#casaur@urosario.edu.co",
-"typeC": "Assertion", 
-"badge": { "$class": "composer.blockcerts.Badge", 
-"id": "Tercera Lengua (certifica cumplimiento del requisito)(1)", 
-"typen": "BadgeClass", 
-"name": "Certifica", 
-"description": "Que $name$, identificado(a) con documento de identidad No. $legalid$, en el programa de $program$, debe cumplir el requisito academico de tercer idioma exigido por la Univeridad segun el Decreto Rectoral 1404 de 10 de febrero de 2016, para lo cual debera cumplir en cualquier momento antes de culminar el programa academcio con alguna de las siguientes opciones: Opcion 1: Aprobar 8 creditos en unos d elos siguientes idiomas ofertados por la Escuela de Ciencias Humanas: aleman, italiano, frances o portugues como requisito de grado. Estos creditos deberan inscribirse y cursarse dentro de las asignaturas ofertadas por la Universidad en estos idiopmas. Opcion 2: acreditar nivel A2 con un examen internacional reconocido por la Universidad en alguno de los siguientes idiomas: aleman, italiano, frances o portugues. En la fecha se certifica que el(a) estudiante acredita el cumplimiento del requisito de tercera lengua con la opcion $opcion$ en el idioma $idiomareq$.",
-"criteria": "Se expide a solicitud del titular de la informacion y previa autorizacion del mismo, en Bogotá D.C. en la fecha $timestamp$.",
-"issuer": { "$class": "composer.blockcerts.Issuer", 
-"id": "NIT. 860.007.759-3", 
-"typen": "Profile", 
-"name": "Universidad del Rosario", 
-"signatureLines": { "$class": "composer.blockcerts.SignatureLines", 
-"typen": "SignatureLine,Extension", 
-"name": "Yesid Garzon", 
-"image": "signYG.png", 
-"jobtitle": "Coordinador(a) de CASA UR" }, 
-"menid": "Personería Jurídica Res. 58 de septiembre 16 de 1895"} 
-}, "context": "https://w3id.org/openbadges/v2,https://w3id.org/blockcerts/v2", "revoked": false }
+{
+  "$class": "org.degree.CertificateTemplate",
+  "templateId": "0002", 
+  "administrator": "resource:org.degree.Administrator#block4opsc@gmail.com",
+  "typeC": "Assertion",
+  "badge": {
+    "$class": "composer.blockcerts.Badge",
+    "id": "Tercera Lengua (certifica cumplimiento del requisito)", 
+    "typen": "BadgeClass",
+    "name": "Certifica", 
+    "description": "Que $name$, identificado(a) con documento de identidad No. $legalid$, en el programa de $program$, debe cumplir el requisito academico de tercer idioma exigido por la Univeridad segun el Decreto Rectoral 1404 de 10 de febrero de 2016, para lo cual debera cumplir en cualquier momento antes de culminar el programa academcio con alguna de las siguientes opciones: Opcion 1: Aprobar 8 creditos en unos d elos siguientes idiomas ofertados por la Escuela de Ciencias Humanas: aleman, italiano, frances o portugues como requisito de grado. Estos creditos deberan inscribirse y cursarse dentro de las asignaturas ofertadas por la Universidad en estos idiopmas. Opcion 2: acreditar nivel A2 con un examen internacional reconocido por la Universidad en alguno de los siguientes idiomas: aleman, italiano, frances o portugues. En la fecha se certifica que el(a) estudiante acredita el cumplimiento del requisito de tercera lengua con la opcion $opcion$ en el idioma $idiomareq$.",
+    "criteria": "Se expide a solicitud del titular de la informacion y previa autorizacion del mismo, en Bogotá D.C. en la fecha $timestamp$.",
+    "issuer": {
+      "$class": "composer.blockcerts.Issuer",
+      "id": "NIT. 860.007.759-3", 
+      "typen": "Profile",
+      "name": "Universidad del Rosario", 
+      "urln": "www.urosario.edu.co",
+      "email": "admin@urosario.edu.co",
+      "description": "",
+      "image": "https://github.com/Blockchain4openscience/diplomasExamples/blob/master/images/logoUR2.png",
+      "signatureLines": {
+        "$class": "composer.blockcerts.SignatureLines",
+        "typen": "SignatureLine,Extension",
+        "name": "John Smith", 
+        "image": "https://github.com/Blockchain4openscience/diplomasExamples/blob/master/images/signature.png",
+        "jobtitle": "Coordinador(a) de CASA UR"
+      },
+      "menid": "Personería Jurídica Res. 58 de septiembre 16 de 1895"
+    }
+  },
+  "context": "https://w3id.org/openbadges/v2,https://w3id.org/blockcerts/v2",
+  "revoked": false
+}
 ```
 Creacion de formato de certificado `Certificate Template` (sancion disciplinaria: 0003):
 
 ```
-{ "$class": "org.degree.CertificateTemplate", 
-"templateId": "0003", 
-"administrator": "resource:org.degree.Administrator#casaur@urosario.edu.co",
-"typeC": "Assertion", 
-"badge": { "$class": "composer.blockcerts.Badge", 
-"id": "Conducta con Antecedentes_Activo", 
-"typen": "BadgeClass", 
-"name": "Certifica", 
-"description": "Que $name$, identificado(a) con documento de identidad No. $legalid$, se ecnauentra actualmente vinculado(a) como estudiante del programa $program$,y tiene registrados los siguientes antecedentes disciplinarios en su historia: 1. Sancion disciplinaria de $sanction$ por el termino de $periods$ periodos academicos a partir de la fecha $firstdate$ por la falta disciplinaria $fault$, impuesta en la fecha $faultdate$ en el proceso disciplinario No. $processid$.",
-"criteria": "Se expide a solicitud del titular de la informacion y previa autorizacion del mismo, en Bogotá D.C. en la fecha $timestamp$.",
-"issuer": { "$class": "composer.blockcerts.Issuer", 
-"id": "NIT. 860.007.759-3", 
-"typen": "Profile", 
-"name": "Universidad del Rosario", 
-"signatureLines": { "$class": "composer.blockcerts.SignatureLines", 
-"typen": "SignatureLine,Extension", 
-"name": "Yesid Garzon", 
-"image": "signYG.png", 
-"jobtitle": "Coordinador(a) de CASA UR" }, 
-"menid": "Personería Jurídica Res. 58 de septiembre 16 de 1895"} 
-}, "context": "https://w3id.org/openbadges/v2,https://w3id.org/blockcerts/v2", "revoked": false }
+{
+  "$class": "org.degree.CertificateTemplate",
+  "templateId": "0003", 
+  "administrator": "resource:org.degree.Administrator#block4opsc@gmail.com",
+  "typeC": "Assertion",
+  "badge": {
+    "$class": "composer.blockcerts.Badge",
+    "id": "Conducta con Antecedentes_Activo", 
+    "typen": "BadgeClass",
+    "name": "Certifica", 
+    "description": "Que $name$, identificado(a) con documento de identidad No. $legalid$, se encuentra actualmente vinculado(a) como estudiante del programa $program$,y tiene registrados los siguientes antecedentes disciplinarios en su historia: 1. Sancion disciplinaria de $sanction$ por el termino de $periods$ periodos academicos a partir de la fecha $firstdate$ por la falta disciplinaria $fault$, impuesta en la fecha $faultdate$ en el proceso disciplinario No. $processid$.",
+    "criteria": "Se expide a solicitud del titular de la informacion y previa autorizacion del mismo, en Bogotá D.C. en la fecha $timestamp$.",
+    "issuer": {
+      "$class": "composer.blockcerts.Issuer",
+      "id": "NIT. 860.007.759-3", 
+      "typen": "Profile",
+      "name": "Universidad del Rosario", 
+      "urln": "www.urosario.edu.co",
+      "email": "admin@urosario.edu.co",
+      "description": "",
+      "image": "https://github.com/Blockchain4openscience/diplomasExamples/blob/master/images/logoUR2.png",
+      "signatureLines": {
+        "$class": "composer.blockcerts.SignatureLines",
+        "typen": "SignatureLine,Extension",
+        "name": "John Smith", 
+        "image": "https://github.com/Blockchain4openscience/diplomasExamples/blob/master/images/signature.png",
+        "jobtitle": "Coordinador(a) de CASA UR"
+      },
+      "menid": "Personería Jurídica Res. 58 de septiembre 16 de 1895"
+    }
+  },
+  "context": "https://w3id.org/openbadges/v2,https://w3id.org/blockcerts/v2",
+  "revoked": false
+}
 ```
 
 ## Emision de certificados a uno o varios estudiantes
