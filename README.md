@@ -10,10 +10,10 @@ El diseño de la red (Business Network) contien los siguientes elementos:
 
 **Asset** </p> 
 `Certificate Template`: formato generico de certificado (participacion en programa, idiomas, sanciones, etc..) </p>
-`Personal Certificate`: emision de un certificado a un estudiante.
 
-**Transaction**
-`AddRoster`: emision de certificados a una lista de estudiantes.
+**Transaction** </p>
+`AddRoster`: emision de certificados a una lista de estudiantes. </p>
+`PersonalizeCertificate`: emision de un certificado a un estudiante. </p>
 
 Inicialmente el formato generico de certificado `Certificate Template` es creado por un funcionario de CASA UR `Administrator`, luego el certificado es emitido a un estudiante mediante la presonalizacion del certificado `Personal Certificate`  o se emite a un conmjunto de estudiantes utilizando la transaccion `AddRoster`. 
 
@@ -26,7 +26,7 @@ Crear un administrador `Administrator`:
 ```
 {
   "$class": "org.degree.Administrator",
-  "email": "casaur@urosario.edu.co",
+  "email": "block4opsc@gmail.com",
   "firstName": "Juan",
   "lastName": "Admin",
   "publicKey": "CASAURadminKEYtest10092018"
@@ -151,33 +151,35 @@ Creacion de formato de certificado `Certificate Template` (sancion disciplinaria
 
 ## Emision de certificados a uno o varios estudiantes
 
-Emision de certificado a un estudiante `Personal Certificate` identificado por su correo electronico for juan.uno@urosario.edu.co:
+Emision de certificado a un estudiante a traves de la transaccion `PersonalizeCertificate` identificado por su correo electronico for juan.uno@urosario.edu.co:
 
 ```
 {
-  "$class": "org.degree.PersonalCertificate",
-  "certId": "1000",
+  "$class": "org.degree.PersonalizeCertificate",
   "templateId": "resource:org.degree.CertificateTemplate#0001",
-  "administrator": "resource:org.degree.Administrator#casaur@urosario.edu.co",
-  "recipient": {
-    "$class": "org.degree.Recipient",
-    "hashed": false,
-    "email": "juan.uno@urosario.edu.co"
-  },
-  "recipientProfile": {
-    "$class": "org.degree.RecipientProfile",
-    "typen": "RecipientProfile,Extension",
-    "name": "Juan Uno",
-    "publicKey": "ecdsa-koblitz-pubkey:juan1",
-    "legalId": "10123456",
-    "assertions": {
-      "$class": "org.degree.Assertions",
-      "program": "Economia",
-      "firtsDate": "2010-08-10",
-      "lastDate": "2015-06-15"
+  "administrator": "resource:org.degree.Administrator#block4opsc@gmail.com",
+  "recipientsInfo": {
+    "$class": "org.degree.RecipientInfo",
+    "certId": "1000",
+    "recipient": {
+      "$class": "org.degree.Recipient",
+      "hashed": false,
+      "email": "juan.uno@urosario.edu.co"
+    },
+    "recipientProfile": {
+      "$class": "org.degree.RecipientProfile",
+      "typen": "RecipientProfile,Extension",
+      "name": "Juan Uno",
+      "publicKey": "ecdsa-koblitz-pubkey:juan1",
+      "legalId": "10123456",
+      "assertions": {
+        "$class": "org.degree.Assertions",
+        "program": "Economia",
+        "firtsDate": "2010-08-10",
+        "lastDate": "2015-06-15"
+      }
     }
-  },
-  "hash": ""
+  }
 }
 ```
 
@@ -189,7 +191,7 @@ Emision masiva de certificados mediante la transaccion `AddRoster` permite la pe
 {
   "$class": "org.degree.AddRoster",
   "templateId": "resource:org.degree.CertificateTemplate#0001",
-  "administrator": "resource:org.degree.Administrator#casaur@urosario.edu.co",
+  "administrator": "resource:org.degree.Administrator#block4opsc@gmail.com",
   "recipientsInfo": [{ 
     "certId": "1002", 
     "recipient": {
@@ -223,8 +225,7 @@ Emision masiva de certificados mediante la transaccion `AddRoster` permite la pe
       "program": "Medicina",
       "firtsDate": "2009-08-10",
       "lastDate": "2014-06-15"
-    }
-  },
+    }}},{
     "certId": "1004", 
     "recipient": {
       "email": "juan.cuatro@gmail.com"

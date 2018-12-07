@@ -41,11 +41,16 @@ asset PersonalCertificate identified by certId {
   o String hash
 }
 
-/*add person info as a string*/
 transaction AddRoster {
   --> CertificateTemplate templateId
   --> Administrator administrator
   o RecipientInfo[] recipientsInfo
+}
+
+transaction PersonalizeCertificate {
+  --> CertificateTemplate templateId
+  --> Administrator administrator
+  o RecipientInfo recipientsInfo
 }
 
 transaction PersonalCertificateHistory {
@@ -63,7 +68,6 @@ transaction AdministratorHistory {
 event AdministratorHistoryResults {
   o String[] results
 }
-
 
 concept RecipientInfo {
   o String certId
