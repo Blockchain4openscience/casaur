@@ -47,8 +47,8 @@ Creacion de formato de certificado `Certificate Template` (participacion en prog
     "id": "Conducta sin Antecedentes_Inactivo", 
     "typen": "BadgeClass",
     "name": "Certifica", 
-    "description": "Que $name$, identificado(a) con documento de identidad No. $legalid$, estuvo vinculado(a) como estudiante del programa de $program$ durante el periodo comprendido entre $firtsdate$ y $lastdate$ y no registra antecedentes disciplinarios en su historia.",
-    "criteria": "Se expide a solicitud del titular de la informacion y previa autorizacion del mismo, en Bogotá D.C. en la fecha $timestamp$.",
+    "description": "Que ${name}, identificado(a) con documento de identidad No. ${legalid}, estuvo vinculado(a) como estudiante del programa de ${program}   durante el periodo comprendido entre ${firtsdate} y ${lastdate} y no registra antecedentes disciplinarios en su historia.",
+    "criteria": "Se expide a solicitud del titular de la informacion y previa autorizacion del mismo, en Bogotá D.C. en la fecha ${timestamp}.",
     "issuer": {
       "$class": "composer.blockcerts.Issuer",
       "id": "NIT. 860.007.759-3", 
@@ -85,8 +85,8 @@ Creacion de formato de certificado `Certificate Template` (requisitos de idioma:
     "id": "Tercera Lengua (certifica cumplimiento del requisito)", 
     "typen": "BadgeClass",
     "name": "Certifica", 
-    "description": "Que $name$, identificado(a) con documento de identidad No. $legalid$, en el programa de $program$, debe cumplir el requisito academico de tercer idioma exigido por la Univeridad segun el Decreto Rectoral 1404 de 10 de febrero de 2016, para lo cual debera cumplir en cualquier momento antes de culminar el programa academcio con alguna de las siguientes opciones: Opcion 1: Aprobar 8 creditos en unos d elos siguientes idiomas ofertados por la Escuela de Ciencias Humanas: aleman, italiano, frances o portugues como requisito de grado. Estos creditos deberan inscribirse y cursarse dentro de las asignaturas ofertadas por la Universidad en estos idiopmas. Opcion 2: acreditar nivel A2 con un examen internacional reconocido por la Universidad en alguno de los siguientes idiomas: aleman, italiano, frances o portugues. En la fecha se certifica que el(a) estudiante acredita el cumplimiento del requisito de tercera lengua con la opcion $opcion$ en el idioma $idiomareq$.",
-    "criteria": "Se expide a solicitud del titular de la informacion y previa autorizacion del mismo, en Bogotá D.C. en la fecha $timestamp$.",
+    "description": "Que ${name}, identificado(a) con documento de identidad No. ${legalid}, en el programa de ${program}, debe cumplir el requisito academico de tercer idioma exigido por la Univeridad segun el Decreto Rectoral 1404 de 10 de febrero de 2016, para lo cual debera cumplir en cualquier momento antes de culminar el programa academcio con alguna de las siguientes opciones: Opcion 1: Aprobar 8 creditos en unos d elos siguientes idiomas ofertados por la Escuela de Ciencias Humanas: aleman, italiano, frances o portugues como requisito de grado. Estos creditos deberan inscribirse y cursarse dentro de las asignaturas ofertadas por la Universidad en estos idiopmas. Opcion 2: acreditar nivel A2 con un examen internacional reconocido por la Universidad en alguno de los siguientes idiomas: aleman, italiano, frances o portugues. En la fecha se certifica que el(a) estudiante acredita el cumplimiento del requisito de tercera lengua con la opcion ${opcion} en el idioma ${idiomareq}.",
+    "criteria": "Se expide a solicitud del titular de la informacion y previa autorizacion del mismo, en Bogotá D.C. en la fecha ${timestamp}.",
     "issuer": {
       "$class": "composer.blockcerts.Issuer",
       "id": "NIT. 860.007.759-3", 
@@ -123,8 +123,8 @@ Creacion de formato de certificado `Certificate Template` (sancion disciplinaria
     "id": "Conducta con Antecedentes_Activo", 
     "typen": "BadgeClass",
     "name": "Certifica", 
-    "description": "Que $name$, identificado(a) con documento de identidad No. $legalid$, se encuentra actualmente vinculado(a) como estudiante del programa $program$,y tiene registrados los siguientes antecedentes disciplinarios en su historia: 1. Sancion disciplinaria de $sanction$ por el termino de $periods$ periodos academicos a partir de la fecha $firstdate$ por la falta disciplinaria $fault$, impuesta en la fecha $faultdate$ en el proceso disciplinario No. $processid$.",
-    "criteria": "Se expide a solicitud del titular de la informacion y previa autorizacion del mismo, en Bogotá D.C. en la fecha $timestamp$.",
+    "description": "Que ${name}, identificado(a) con documento de identidad No. ${legalid}, se encuentra actualmente vinculado(a) como estudiante del programa ${program},y tiene registrados los siguientes antecedentes disciplinarios en su historia: 1. Sancion disciplinaria de ${sanction} por el termino de ${periods} periodos academicos a partir de la fecha ${firstdate} por la falta disciplinaria ${fault}, impuesta en la fecha ${faultdate} en el proceso disciplinario No. ${processid}.",
+    "criteria": "Se expide a solicitud del titular de la informacion y previa autorizacion del mismo, en Bogotá D.C. en la fecha ${timestamp}.",
     "issuer": {
       "$class": "composer.blockcerts.Issuer",
       "id": "NIT. 860.007.759-3", 
@@ -169,12 +169,12 @@ Emision de certificado a un estudiante `Personal Certificate` identificado por s
     "typen": "RecipientProfile,Extension",
     "name": "Juan Uno",
     "publicKey": "ecdsa-koblitz-pubkey:juan1",
-    "legalid": "10123456",
+    "legalId": "10123456",
     "assertions": {
       "$class": "org.degree.Assertions",
       "program": "Economia",
-      "firtsdate": "2010-08-10",
-      "lastdate": "2015-06-15"
+      "firtsDate": "2010-08-10",
+      "lastDate": "2015-06-15"
     }
   },
   "hash": ""
@@ -200,12 +200,12 @@ Emision masiva de certificados mediante la transaccion `AddRoster` permite la pe
       "typen": "RecipientProfile,Extension",
       "name": "Juan Dos",
       "publicKey": "ecdsa-koblitz-pubkey:juan2",
-      "legalid": "10789123",
+      "legalId": "10789123",
       "assertions": {
       "$class": "org.degree.Assertions",
       "program": "Ciencia Politica y Gobierno",
-      "firtsdate": "2011-08-10",
-      "lastdate": "2016-06-15"
+      "firtsDate": "2011-08-10",
+      "lastDate": "2016-06-15"
     }
   }},{
     "certId": "1003", 
@@ -217,12 +217,12 @@ Emision masiva de certificados mediante la transaccion `AddRoster` permite la pe
       "typen": "RecipientProfile,Extension",
       "name": "Juan Tres",
       "publicKey": "ecdsa-koblitz-pubkey:juan3",
-      "legalid": "10456689",
+      "legalId": "10456689",
       "assertions": {
       "$class": "org.degree.Assertions",
       "program": "Medicina",
-      "firtsdate": "2009-08-10",
-      "lastdate": "2014-06-15"
+      "firtsDate": "2009-08-10",
+      "lastDate": "2014-06-15"
     }
   },
     "certId": "1004", 
@@ -234,12 +234,12 @@ Emision masiva de certificados mediante la transaccion `AddRoster` permite la pe
       "typen": "RecipientProfile,Extension",
       "name": "Juan Cuatro",
       "publicKey": "ecdsa-koblitz-pubkey:juan4",
-      "legalid": "10987654",
+      "legalId": "10987654",
       "assertions": {
       "$class": "org.degree.Assertions",
       "program": "Biologia",
-      "firtsdate": "2004-08-10",
-      "lastdate": "2018-06-15"
+      "firtsDate": "2004-08-10",
+      "lastDate": "2018-06-15"
     }
   }}
   ]
