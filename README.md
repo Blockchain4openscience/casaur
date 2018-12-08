@@ -57,12 +57,12 @@ Creacion de formato de certificado `Certificate Template` (participacion en prog
       "urln": "www.urosario.edu.co",
       "email": "admin@urosario.edu.co",
       "description": "",
-      "image": "https://github.com/Blockchain4openscience/diplomasExamples/blob/master/images/logoUR2.png",
+      "image": "https://raw.githubusercontent.com/Blockchain4openscience/diplomasExamples/master/images/logoUR2.png",
       "signatureLines": {
         "$class": "composer.blockcerts.SignatureLines",
         "typen": "SignatureLine,Extension",
         "name": "John Smith", 
-        "image": "https://github.com/Blockchain4openscience/diplomasExamples/blob/master/images/signature.png",
+        "image": "https://raw.githubusercontent.com/Blockchain4openscience/diplomasExamples/master/images/signature.png",
         "jobtitle": "Coordinador(a) de CASA UR"
       },
       "menid": "Personería Jurídica Res. 58 de septiembre 16 de 1895"
@@ -95,12 +95,12 @@ Creacion de formato de certificado `Certificate Template` (requisitos de idioma:
       "urln": "www.urosario.edu.co",
       "email": "admin@urosario.edu.co",
       "description": "",
-      "image": "https://github.com/Blockchain4openscience/diplomasExamples/blob/master/images/logoUR2.png",
+      "image": "https://raw.githubusercontent.com/Blockchain4openscience/diplomasExamples/master/images/logoUR2.png",
       "signatureLines": {
         "$class": "composer.blockcerts.SignatureLines",
         "typen": "SignatureLine,Extension",
         "name": "John Smith", 
-        "image": "https://github.com/Blockchain4openscience/diplomasExamples/blob/master/images/signature.png",
+        "image": "https://raw.githubusercontent.com/Blockchain4openscience/diplomasExamples/master/images/signature.png",
         "jobtitle": "Coordinador(a) de CASA UR"
       },
       "menid": "Personería Jurídica Res. 58 de septiembre 16 de 1895"
@@ -133,12 +133,12 @@ Creacion de formato de certificado `Certificate Template` (sancion disciplinaria
       "urln": "www.urosario.edu.co",
       "email": "admin@urosario.edu.co",
       "description": "",
-      "image": "https://github.com/Blockchain4openscience/diplomasExamples/blob/master/images/logoUR2.png",
+      "image": "https://raw.githubusercontent.com/Blockchain4openscience/diplomasExamples/master/images/logoUR2.png",
       "signatureLines": {
         "$class": "composer.blockcerts.SignatureLines",
         "typen": "SignatureLine,Extension",
         "name": "John Smith", 
-        "image": "https://github.com/Blockchain4openscience/diplomasExamples/blob/master/images/signature.png",
+        "image": "https://raw.githubusercontent.com/Blockchain4openscience/diplomasExamples/master/images/signature.png",
         "jobtitle": "Coordinador(a) de CASA UR"
       },
       "menid": "Personería Jurídica Res. 58 de septiembre 16 de 1895"
